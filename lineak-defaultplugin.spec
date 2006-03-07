@@ -1,16 +1,16 @@
 %define		packagename	lineak_defaultplugin
 
-Summary:	This is the default plugin for the lineakd daemon.
-Summary(pl):	To jest domyÅ›lna wtyczka demona lineakd.
+Summary:	This is the default plugin for the lineakd daemon
+Summary(pl):	To jest domy¶lna wtyczka demona lineakd
 Name:		lineak-defaultplugin
 Version:	0.8.4
 Release:	0.9
 License:	GPL
-Url:		http://lineak.sourceforge.net
 Group:		Applications/System
 Source0:	http://dl.sourceforge.net/lineak/%{packagename}-%{version}.tar.gz
 # Source0-md5:	336b4fa5aa40b1166c2aa5418740357b
 Patch0:		%{name}-DESTDIR.patch
+URL:		http://lineak.sourceforge.net/
 BuildRequires:	autoconf >= 2.54
 BuildRequires:	automake
 BuildRequires:	libstdc++-devel
@@ -39,9 +39,9 @@ EAK_SENDKEYS_ROOT
 EAK_MEDIADETECT
 
 %description -l pl
-To jest zbiÃ³r wtyczek do lineakd. Wtyczki te pozwalajÄ… na
-dowiÄ…zywanie akcji do specjalnych klaiwszy. Ten plugin zawiera
-pierwotne makra lineakd:
+To jest zbiór wtyczek do lineakd. Wtyczki te pozwalaj± na dowi±zywanie
+akcji do specjalnych klawiszy. Ten plugin zawiera pierwotne makra
+lineakd:
 
 EAK_MUTE
 EAK_VOLUP
@@ -86,4 +86,4 @@ rm -rf $RPM_BUILD_ROOT
 %doc AUTHORS COPYING ChangeLog README TODO media-detect.conf
 %{_libdir}/lineakd/plugins/*
 %{_sysconfdir}/*
-%{_mandir}/*/*
+%{_mandir}/man*/*
