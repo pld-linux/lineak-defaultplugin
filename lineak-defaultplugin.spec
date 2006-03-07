@@ -1,7 +1,7 @@
 %define		packagename	lineak_defaultplugin
 
-Summary:	This is the default plugin for the lineakd daemon
-Summary(pl):	To jest domylna wtyczka demona lineakd
+Summary:	The default plugin for the lineakd daemon
+Summary(pl):	Domy¶lna wtyczka demona lineakd
 Name:		lineak-defaultplugin
 Version:	0.8.4
 Release:	0.9
@@ -20,8 +20,8 @@ Requires:	lineakd >= %{version}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-This is a plugin for lineakd. The plugin allows binding actions to special
-keys.
+This is a plugin for lineakd. The plugin allows binding actions to
+special keys.
 
 This plugin contains the original lineakd macros:
 
@@ -40,10 +40,10 @@ EAK_SENDKEYS_ROOT
 EAK_MEDIADETECT
 
 %description -l pl
-To jest wtyczka do lineakd. Wtyczka ta pozwala na dowi±zywanie
-akcji do specjalnych klawiszy.
+To jest wtyczka do lineakd. Wtyczka ta pozwala na dowi±zywanie akcji
+do specjalnych klawiszy.
 
-Ten plugin zawiera pierwotne makra lineakd:
+Ta wtyczka zawiera pierwotne makra lineakd:
 
 EAK_MUTE
 EAK_VOLUP
