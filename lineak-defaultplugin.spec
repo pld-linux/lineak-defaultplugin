@@ -19,6 +19,7 @@ BuildRequires:	libtool
 BuildRequires:	lineakd-devel >= %{version}
 BuildRequires:	sed >= 4.0
 Requires:	lineakd >= %{version}
+Obsoletes:	lineak_defaultplugin
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
