@@ -1,0 +1,38 @@
+--- lineak-defaultplugin-0.9/default_plugin/Makefile.am.orig	2006-01-30 19:11:37.000000000 +0100
++++ lineak-defaultplugin-0.9/default_plugin/Makefile.am	2006-08-20 22:35:01.569526000 +0200
+@@ -7,12 +7,12 @@
+ plugindir = $(PLUGINDIR)
+ 
+ defaultplugin_la_METASOURCES = AUTO
+-defaultplugin_la_LIBADD = -llineak $(XTESTLIB) -lXext -lX11 -lXtst
++defaultplugin_la_LIBADD = -llineak -lX11
+ defaultplugin_la_SOURCES = defaultplugin.cpp soundctrl.cpp defaultplugin.h soundctrl.h
+ defaultplugin_la_LDFLAGS = -module -avoid-version
+ 
+ mediadetectplugin_la_METASOURCES = AUTO
+-mediadetectplugin_la_LIBADD = -llineak $(XTESTLIB) -lXext -lX11 -lXtst
++mediadetectplugin_la_LIBADD = -llineak
+ mediadetectplugin_la_SOURCES = mediadetectplugin.cpp mediadetectplugin.h mdloader.cpp mdloader.h
+ mediadetectplugin_la_LDFLAGS = -module -avoid-version
+ 
+--- lineak-defaultplugin-0.9/default_plugin/defaultplugin.cpp.orig	2006-08-20 22:35:09.278007750 +0200
++++ lineak-defaultplugin-0.9/default_plugin/defaultplugin.cpp	2006-08-20 22:31:46.029305500 +0200
+@@ -28,7 +28,7 @@
+ #include <lineak/lineak_util_functions.h>
+ #include <lineak/lineak_core_functions.h>
+ #include <lineak/xmgr.h>
+-#include <X11/extensions/XTest.h>
++//#include <X11/extensions/XTest.h>
+ #include <algorithm>
+ #include <cctype>
+ 
+--- lineak-defaultplugin-0.9/default_plugin/mediadetectplugin.cpp.orig	2006-08-20 22:35:20.750724750 +0200
++++ lineak-defaultplugin-0.9/default_plugin/mediadetectplugin.cpp	2006-08-20 22:35:16.786477000 +0200
+@@ -30,7 +30,6 @@
+ #include <lineak/lineak_core_functions.h>
+ #include <lineak/pluginmanager.h>
+ #include <lineak/xmgr.h>
+-#include <X11/extensions/XTest.h>
+ #include <algorithm>
+ #include <cctype>
+ 
