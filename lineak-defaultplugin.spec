@@ -1,28 +1,21 @@
-#
-# TODO:
-# - make it xorg style and th compliant
-#
-%define		packagename	lineak_defaultplugin
-
 Summary:	The default plugin for the lineakd daemon
 Summary(pl):	Domy¶lna wtyczka demona lineakd
 Name:		lineak-defaultplugin
-%define		_beta	pre1
-Version:	0.9.0
-Release:	%{_beta}.0.9
+Version:	0.9
+Release:	1
 License:	GPL v2+
 Group:		Applications/System
-Source0:	http://dl.sourceforge.net/lineak/%{packagename}-%{version}-%{_beta}.tar.gz
-# Source0-md5:	1c41d094dd461c6567ab399ef760e7a4
-Patch0:		%{name}-DESTDIR.patch
+Source0:	http://dl.sourceforge.net/lineak/%{name}-%{version}.tar.gz
+# Source0-md5:	425df8c225c1a079a4ed1f221d2a5479
+Patch0:		%{name}-make.patch
 URL:		http://lineak.sourceforge.net/
-BuildRequires:	XFree86-devel
 BuildRequires:	autoconf >= 2.54
 BuildRequires:	automake
 BuildRequires:	libstdc++-devel
-BuildRequires:	libtool
+BuildRequires:	libtool >= 2:1.5
 BuildRequires:	lineakd-devel >= 0.9
 BuildRequires:	sed >= 4.0
+BuildRequires:	xorg-lib-libX11-devel
 Requires:	lineakd >= 0.9
 Obsoletes:	lineak_defaultplugin
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -68,8 +61,8 @@ EAK_SENDKEYS_ROOT
 EAK_MEDIADETECT
 
 %prep
-%setup -q -n %{packagename}-%{version}-%{_beta}
-#%patch0 -p1
+%setup -q
+%patch0 -p1
 
 # kill plugin dir existence test
 sed -i -e 's/test ! -d \$pdir/false/' admin/lineak.m4.in
