@@ -1,5 +1,5 @@
 Summary:	The default plugin for the lineakd daemon
-Summary(pl):	Domy¶lna wtyczka demona lineakd
+Summary(pl.UTF-8):   DomyÅ›lna wtyczka demona lineakd
 Name:		lineak-defaultplugin
 Version:	0.9
 Release:	1
@@ -40,8 +40,8 @@ EAK_SENDKEYS or EAK_SYM
 EAK_SENDKEYS_ROOT
 EAK_MEDIADETECT
 
-%description -l pl
-To jest wtyczka do lineakd. Wtyczka ta pozwala na dowi±zywanie akcji
+%description -l pl.UTF-8
+To jest wtyczka do lineakd. Wtyczka ta pozwala na dowiÄ…zywanie akcji
 do specjalnych klawiszy.
 
 Ta wtyczka zawiera pierwotne makra lineakd:
