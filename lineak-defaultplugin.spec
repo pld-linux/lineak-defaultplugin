@@ -1,5 +1,5 @@
 Summary:	The default plugin for the lineakd daemon
-Summary(pl.UTF-8):   Domyślna wtyczka demona lineakd
+Summary(pl.UTF-8):	Domyślna wtyczka demona lineakd
 Name:		lineak-defaultplugin
 Version:	0.9
 Release:	1
