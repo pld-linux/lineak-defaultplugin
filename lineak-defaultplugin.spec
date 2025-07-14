@@ -62,7 +62,7 @@ EAK_MEDIADETECT
 
 %prep
 %setup -q
-%patch0 -p1
+%patch -P0 -p1
 
 # kill plugin dir existence test
 sed -i -e 's/test ! -d \$pdir/false/' admin/lineak.m4.in
